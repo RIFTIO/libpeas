@@ -136,9 +136,7 @@ dnl ================================================================
 AC_MSG_CHECKING([for native Mac OS X])
 
 
-GTK_CHECK_BACKEND([quartz], [3.0.0], [os_osx=yes], [os_osx=no])
-AC_MSG_RESULT([$os_osx])
-AM_CONDITIONAL(OS_OSX, test "$os_osx" = "yes")
+AM_CONDITIONAL(OS_OSX, test "x$os_osx" = "yes")
 
 if test "$os_osx" = "yes"; then
 	AC_DEFINE([OS_OSX],[1],[Defined if os is Mac OSX])
